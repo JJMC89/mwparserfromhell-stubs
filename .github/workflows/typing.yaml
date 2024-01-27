@@ -1,0 +1,40 @@
+name: typing
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_call:
+jobs:
+  test:
+    strategy:
+      matrix:
+        python-version:
+          - '3.8'
+          - '3.9'
+          - '3.10'
+          - '3.11'
+          - '3.12'
+    name: python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: set up python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: install poetry
+      uses: snok/install-poetry@v1
+    - name: checkout
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: install package
+      run: poetry install --without stubtest
+    - name: run mypy
+      run: poetry run mypy -p mwparserfromhell
+    - name: run pyright
+      run: poetry run pyright $(git ls-files '*.pyi')
+    - name: install mwparserfromhell
+      run: poetry install
+    - name: run stubtest
+      run: poetry run stubtest mwparserfromhell --allowlist stubtest-allowlist.txt

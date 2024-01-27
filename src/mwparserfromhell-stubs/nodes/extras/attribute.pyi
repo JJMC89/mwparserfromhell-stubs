@@ -1,0 +1,46 @@
+from typing import Literal
+
+from ...string_mixin import StringMixIn
+from ...utils import _Parseable
+from ...wikicode import Wikicode
+
+__all__ = ["Attribute"]
+
+class Attribute(StringMixIn):
+    def __init__(
+        self,
+        name: _Parseable,
+        value: _Parseable = ...,
+        quotes: Literal['"', "'"] | None = ...,
+        pad_first: str = ...,
+        pad_before_eq: str = ...,
+        pad_after_eq: str = ...,
+    ) -> None: ...
+    @staticmethod
+    def coerce_quotes(
+        quotes: Literal['"', "'", ""] | None,
+    ) -> Literal['"', "'"] | None: ...
+    @property
+    def name(self) -> Wikicode: ...
+    @name.setter
+    def name(self, value: _Parseable) -> None: ...
+    @property
+    def value(self) -> Wikicode: ...
+    @value.setter
+    def value(self, newval: _Parseable) -> None: ...
+    @property
+    def quotes(self) -> Literal['"', "'"] | None: ...
+    @quotes.setter
+    def quotes(self, value: Literal['"', "'", ""] | None) -> None: ...
+    @property
+    def pad_first(self) -> str: ...
+    @pad_first.setter
+    def pad_first(self, value: str) -> None: ...
+    @property
+    def pad_before_eq(self) -> str: ...
+    @pad_before_eq.setter
+    def pad_before_eq(self, value: str) -> None: ...
+    @property
+    def pad_after_eq(self) -> str: ...
+    @pad_after_eq.setter
+    def pad_after_eq(self, value: str) -> None: ...
