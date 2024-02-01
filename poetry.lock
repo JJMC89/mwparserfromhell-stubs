@@ -16,9 +16,12 @@ files = [
     {file = "mwparserfromhell-0.6.6-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:59633d3cc09993af75ced8dfbd6800e1e38e64620851a095575621548448875c"},
     {file = "mwparserfromhell-0.6.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:007d0859e5467241b73c6e974df039a074609ce4e2b9df8c2263a8920554d032"},
     {file = "mwparserfromhell-0.6.6-cp311-cp311-win32.whl", hash = "sha256:dbe5976b1b524e26aa2eb71b6219960f2578f56b536c68e0a79deb63e3b7f710"},
+    {file = "mwparserfromhell-0.6.6-cp311-cp311-win_amd64.whl", hash = "sha256:063c1e79befd1f55d77c358e0f5006f5ecf88ddf218ff6af55188d686139330e"},
     {file = "mwparserfromhell-0.6.6-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:910d36bc70e8bea758380e75c12fd47626b295abec9f73a6099d8f937a649e77"},
     {file = "mwparserfromhell-0.6.6-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d2febd92a55a3f19b461833267726cb81429c3d6cb0006ad1691dfa849789e5d"},
     {file = "mwparserfromhell-0.6.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2b75fae6d01c8fda19dbf127175122d7aa2964ef6454690e6868bbc3d80a7bc1"},
+    {file = "mwparserfromhell-0.6.6-cp312-cp312-win32.whl", hash = "sha256:19e9a4bcd85707c83172405eb2a9a046eff9d38dd7f1a56a5e5ecbbfef4a640a"},
+    {file = "mwparserfromhell-0.6.6-cp312-cp312-win_amd64.whl", hash = "sha256:cdc46c115b2495d4025920b7b30a6885a96d2b797ccc4009bf3cc02940ae55d3"},
     {file = "mwparserfromhell-0.6.6-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:fd05481adc0806f4b8f8f8cb309ec56924b17ce386cb1c2f73919d8a012e6b16"},
     {file = "mwparserfromhell-0.6.6-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:03e03b8bec729af850457d045b04d0c9d3e296ff8bf66b455f754cccb29c3bea"},
     {file = "mwparserfromhell-0.6.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1d2422659abb29191a0fa096cf8bead837ac3ecd343065569b2acc7a84ecf866"},
@@ -106,13 +109,13 @@ setuptools = "*"
 
 [[package]]
 name = "pyright"
-version = "1.1.348"
+version = "1.1.349"
 description = "Command line wrapper for pyright"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pyright-1.1.348-py3-none-any.whl", hash = "sha256:e7d4df504c4c082b5c3725a8c15fc3fda62da5d09fc77994baa77f359a1b62f2"},
-    {file = "pyright-1.1.348.tar.gz", hash = "sha256:1c6994546f7ab130b9da8c357f8b2a99bef268b6d8ae2eae292bde66923aa7af"},
+    {file = "pyright-1.1.349-py3-none-any.whl", hash = "sha256:8f9189ddb62222a35b3525666225f1d8f24244cbff5893c42b3f001d8ebafa1a"},
+    {file = "pyright-1.1.349.tar.gz", hash = "sha256:af4ab7f103a0b2a92e5fbf248bf734e9a98247991350ac989ead34e97148f91c"},
 ]
 
 [package.dependencies]
@@ -163,4 +166,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8"
-content-hash = "e5e1edb530f98f658da44da17b3ec9ba9af17f2e98ad475f579a62e6b062ec0e"
+content-hash = "574bfa476556ab52e135dc0e5f389b990beb2081478936fb33a78fe73d4d02e3"
