@@ -19,6 +19,7 @@ enable_error_code = [
 ]
 strict = true
 
+
 [tool.poetry]
 authors = ["JJMC89"]
 classifiers = [
@@ -43,10 +44,11 @@ typing-extensions = ">=4.0.0"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "1.9.0"
-pyright = "1.1.354"
+pyright = "1.1.356"
 
 [tool.poetry.group.stubtest.dependencies]
 mwparserfromhell = "0.6.6"
+
 
 [tool.pyright]
 enableTypeIgnoreComments = false
