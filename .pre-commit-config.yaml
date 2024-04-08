@@ -8,7 +8,7 @@ repos:
       - id: check-hooks-apply
       - id: check-useless-excludes
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -99,7 +99,7 @@ repos:
           - --python-version
           - '3.8'
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.356
+    rev: v1.1.357
     hooks:
       - id: pyright
         args:
