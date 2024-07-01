@@ -92,14 +92,14 @@ repos:
           - python
           - pyi
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.10.0
+    rev: v1.10.1
     hooks:
       - id: mypy
         args:
           - --python-version
           - '3.8'
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.368
+    rev: v1.1.369
     hooks:
       - id: pyright
         args:
