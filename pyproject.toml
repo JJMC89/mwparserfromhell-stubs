@@ -43,8 +43,8 @@ python = ">=3.8"
 typing-extensions = ">=4.0.0"
 
 [tool.poetry.group.typing.dependencies]
-mypy = "1.10.1"
-pyright = "1.1.373"
+mypy = "1.11.1"
+pyright = "1.1.374"
 
 [tool.poetry.group.stubtest.dependencies]
 mwparserfromhell = "0.6.6"
