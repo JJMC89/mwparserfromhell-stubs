@@ -74,7 +74,7 @@ repos:
           - python
           - pyi
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 24.4.2
+    rev: 24.8.0
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/flake8
@@ -99,7 +99,7 @@ repos:
           - --python-version
           - '3.8'
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.374
+    rev: v1.1.375
     hooks:
       - id: pyright
         args:
