@@ -4,13 +4,13 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.black]
-target-version = ["py38"]
+target-version = ["py39"]
 
 
 [tool.isort]
 atomic = true
 profile = "black"
-py_version = 38
+py_version = 39
 
 
 [tool.mypy]
@@ -39,7 +39,7 @@ repository = "https://github.com/JJMC89/mwparserfromhell-stubs"
 version = "0.6.6.240127"
 
 [tool.poetry.dependencies]
-python = ">=3.8"
+python = ">=3.9"
 typing-extensions = ">=4.0.0"
 
 [tool.poetry.group.typing.dependencies]
