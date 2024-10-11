@@ -97,11 +97,11 @@ repos:
       - id: mypy
         args:
           - --python-version
-          - '3.8'
+          - '3.9'
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.383
+    rev: v1.1.384
     hooks:
       - id: pyright
         args:
           - --pythonversion
-          - '3.8'
+          - '3.9'
