@@ -112,13 +112,13 @@ files = [
 
 [[package]]
 name = "pyright"
-version = "1.1.387"
+version = "1.1.388"
 description = "Command line wrapper for pyright"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pyright-1.1.387-py3-none-any.whl", hash = "sha256:6a1f495a261a72e12ad17e20d1ae3df4511223c773b19407cfa006229b1b08a5"},
-    {file = "pyright-1.1.387.tar.gz", hash = "sha256:577de60224f7fe36505d5b181231e3a395d427b7873be0bbcaa962a29ea93a60"},
+    {file = "pyright-1.1.388-py3-none-any.whl", hash = "sha256:c7068e9f2c23539c6ac35fc9efac6c6c1b9aa5a0ce97a9a8a6cf0090d7cbf84c"},
+    {file = "pyright-1.1.388.tar.gz", hash = "sha256:0166d19b716b77fd2d9055de29f71d844874dbc6b9d3472ccd22df91db3dfa34"},
 ]
 
 [package.dependencies]
@@ -132,13 +132,13 @@ nodejs = ["nodejs-wheel-binaries"]
 
 [[package]]
 name = "tomli"
-version = "2.0.2"
+version = "2.1.0"
 description = "A lil' TOML parser"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "tomli-2.0.2-py3-none-any.whl", hash = "sha256:2ebe24485c53d303f690b0ec092806a085f07af5a5aa1464f3931eec36caaa38"},
-    {file = "tomli-2.0.2.tar.gz", hash = "sha256:d46d457a85337051c36524bc5349dd91b1877838e2979ac5ced3e710ed8a60ed"},
+    {file = "tomli-2.1.0-py3-none-any.whl", hash = "sha256:a5c57c3d1c56f5ccdf89f6523458f60ef716e210fc47c4cfb188c5ba473e0391"},
+    {file = "tomli-2.1.0.tar.gz", hash = "sha256:3f646cae2aec94e17d04973e4249548320197cfabdf130015d023de4b74d8ab8"},
 ]
 
 [[package]]
@@ -155,4 +155,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9"
-content-hash = "6d7f83d15c6642ab17964d23a7283540aed999abd745c588fb708f1c4e3aba36"
+content-hash = "30d67089b7426619bc7fa26d05b12bb7a9fc15a1ea7a8b0e9b6a926b28bd7af3"
