@@ -44,7 +44,7 @@ typing-extensions = ">=4.0.0"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "1.13.0"
-pyright = "1.1.389"
+pyright = "1.1.390"
 
 [tool.poetry.group.stubtest.dependencies]
 mwparserfromhell = "0.6.6"
