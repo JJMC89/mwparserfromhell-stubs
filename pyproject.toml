@@ -1,6 +1,30 @@
 [build-system]
-requires = ["poetry-core>=1.8.0"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[project]
+authors = [
+    { name = "JJMC89" },
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Typing :: Stubs Only",
+]
+dependencies = [
+    "typing-extensions (>=4.0.0)",
+]
+description = "Type annotations for mwparserfromhell"
+license = { text = "MIT" }
+name = "mwparserfromhell-stubs"
+readme = "README.md"
+requires-python = ">=3.9"
+version = "0.6.6.240127"
+
+[project.urls]
+source = "https://github.com/JJMC89/mwparserfromhell-stubs"
 
 
 [tool.black]
@@ -21,26 +45,9 @@ strict = true
 
 
 [tool.poetry]
-authors = ["JJMC89"]
-classifiers = [
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3 :: Only",
-    "Typing :: Stubs Only",
-]
-description = "Type annotations for mwparserfromhell"
-license = "MIT"
-name = "mwparserfromhell-stubs"
 packages = [
     {include = "mwparserfromhell-stubs", from = "src"}
 ]
-readme = "README.md"
-repository = "https://github.com/JJMC89/mwparserfromhell-stubs"
-version = "0.6.6.240127"
-
-[tool.poetry.dependencies]
-python = ">=3.9"
-typing-extensions = ">=4.0.0"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "1.14.1"
