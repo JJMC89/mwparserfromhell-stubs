@@ -59,7 +59,7 @@ repos:
           - python
           - pyi
   - repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+    rev: 6.0.0
     hooks:
       - id: isort
   - repo: https://github.com/asottile/yesqa
@@ -74,7 +74,7 @@ repos:
           - python
           - pyi
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 24.10.0
+    rev: 25.1.0
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/flake8
@@ -99,7 +99,7 @@ repos:
           - --python-version
           - '3.9'
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.392.post0
+    rev: v1.1.393
     hooks:
       - id: pyright
         args:
