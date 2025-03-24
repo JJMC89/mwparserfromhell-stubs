@@ -99,7 +99,7 @@ repos:
           - --python-version
           - '3.9'
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.396
+    rev: v1.1.397
     hooks:
       - id: pyright
         args:
