@@ -1,5 +1,3 @@
-from collections.abc import Generator
-
 from ..utils import _Parseable
 from ..wikicode import Wikicode
 from ._base import Node
@@ -15,14 +13,6 @@ class ExternalLink(Node):
         brackets: bool = ...,
         suppress_space: bool = ...,
     ) -> None: ...
-    def __children__(self) -> Generator[Wikicode, None, None]: ...
-    def __strip__(
-        self,
-        *,
-        normalize: bool = ...,
-        collapse: bool = ...,
-        keep_template_params: bool = ...,
-    ) -> str | None: ...
     @property
     def url(self) -> Wikicode: ...
     @url.setter

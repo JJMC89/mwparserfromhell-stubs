@@ -42,12 +42,14 @@ class SmartList(list[_T]):
     @overload
     def sort(
         self: SmartList[SupportsRichComparisonT],
+        *,
         key: None = None,
         reverse: bool | None = ...,
     ) -> None: ...
     @overload
-    def sort(  # pyright: ignore[reportIncompatibleMethodOverride]
+    def sort(
         self,
+        *,
         key: Callable[[_T], SupportsRichComparison],
         reverse: bool | None = ...,
     ) -> None: ...

@@ -1,4 +1,3 @@
-from collections.abc import Generator
 from typing import Literal
 
 from ..utils import _Parseable
@@ -13,7 +12,7 @@ class Tag(Node):
         self,
         tag: _Parseable,
         contents: _Parseable = ...,
-        attrs: _Parseable = ...,
+        attrs: list[Attribute] | None = ...,
         wiki_markup: str | None = ...,
         self_closing: bool = ...,
         invalid: bool = ...,
@@ -23,14 +22,6 @@ class Tag(Node):
         wiki_style_separator: str | None = ...,
         closing_wiki_markup: str | None = ...,
     ) -> None: ...
-    def __children__(self) -> Generator[Wikicode, None, None]: ...
-    def __strip__(
-        self,
-        *,
-        normalize: bool = ...,
-        collapse: bool = ...,
-        keep_template_params: bool = ...,
-    ) -> str | None: ...
     @property
     def tag(self) -> Wikicode: ...
     @tag.setter
@@ -73,8 +64,8 @@ class Tag(Node):
     def closing_wiki_markup(self) -> str | None: ...
     @closing_wiki_markup.setter
     def closing_wiki_markup(self, value: str | None) -> None: ...
-    def has(self, name: _Parseable) -> bool: ...
-    def get(self, name: _Parseable) -> Attribute: ...
+    def has(self, name: str | Attribute | Wikicode) -> bool: ...
+    def get(self, name: str | Attribute | Wikicode) -> Attribute: ...
     def add(
         self,
         name: _Parseable,
@@ -84,4 +75,4 @@ class Tag(Node):
         pad_before_eq: str = ...,
         pad_after_eq: str = ...,
     ) -> Attribute: ...
-    def remove(self, name: _Parseable) -> None: ...
+    def remove(self, name: str) -> None: ...

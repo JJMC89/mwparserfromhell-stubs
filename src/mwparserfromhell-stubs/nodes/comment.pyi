@@ -1,9 +1,10 @@
+from ..wikicode import Wikicode
 from ._base import Node
 
 __all__ = ["Comment"]
 
 class Comment(Node):
-    def __init__(self, contents: object) -> None: ...
+    def __init__(self, contents: str | Wikicode) -> None: ...
     def __strip__(
         self,
         *,

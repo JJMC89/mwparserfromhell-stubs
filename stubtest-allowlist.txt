@@ -1,8 +1,0 @@
-mwparserfromhell.definitions
-mwparserfromhell.parser
-mwparserfromhell.parser.builder
-mwparserfromhell.parser.contexts
-mwparserfromhell.parser.errors
-mwparserfromhell.parser.tokenizer
-mwparserfromhell.parser.tokens
-mwparserfromhell.smart_list.utils

@@ -1,3 +1,4 @@
+from . import extras as extras
 from ._base import Node as Node
 from .argument import Argument as Argument
 from .comment import Comment as Comment
@@ -20,4 +21,5 @@ __all__ = [
     "Template",
     "Text",
     "Wikilink",
+    "extras",
 ]
