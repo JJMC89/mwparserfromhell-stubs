@@ -37,4 +37,4 @@ jobs:
     - name: install mwparserfromhell
       run: poetry install
     - name: run stubtest
-      run: poetry run stubtest mwparserfromhell --allowlist stubtest-allowlist.txt
+      run: poetry run stubtest mwparserfromhell

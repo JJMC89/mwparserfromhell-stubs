@@ -1,13 +1,26 @@
-from . import nodes as nodes  # noqa: F401
-from . import smart_list as smart_list  # noqa: F401
-from . import string_mixin as string_mixin  # noqa: F401
+from . import definitions as definitions
+from . import nodes as nodes
+from . import parser as parser
+from . import smart_list as smart_list
+from . import string_mixin as string_mixin
 from . import utils as utils
-from . import wikicode as wikicode  # noqa: F401
+from . import wikicode as wikicode
 
 __author__: str
 __copyright__: str
 __license__: str
 __version__: str
 __email__: str
+
+__all__ = [
+    "definitions",
+    "nodes",
+    "parser",
+    "smart_list",
+    "string_mixin",
+    "utils",
+    "wikicode",
+    "parse",
+]
 
 parse = utils.parse_anything

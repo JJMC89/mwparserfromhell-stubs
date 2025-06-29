@@ -1,6 +1,4 @@
-from typing import Literal, overload
-
-from typing_extensions import Self
+from typing import Literal
 
 from ._base import Node
 
@@ -9,43 +7,26 @@ __all__ = ["HTMLEntity"]
 class HTMLEntity(Node):
     def __init__(
         self,
-        value: str,
+        value: object,
         named: bool | None = ...,
         hexadecimal: bool = ...,
         hex_char: Literal["x", "X"] = ...,
     ) -> None: ...
-    @overload
-    def __strip__(
-        self,
-        *,
-        normalize: Literal[True],
-        collapse: bool = ...,
-        keep_template_params: bool = ...,
-    ) -> str: ...
-    @overload
-    def __strip__(
-        self,
-        *,
-        normalize: Literal[False],
-        collapse: bool = ...,
-        keep_template_params: bool = ...,
-    ) -> Self: ...
-    @overload
     def __strip__(
         self,
         *,
         normalize: bool = ...,
         collapse: bool = ...,
         keep_template_params: bool = ...,
-    ) -> str | Self: ...
+    ) -> str: ...
     @property
     def value(self) -> str: ...
     @value.setter
-    def value(self, newval: str) -> None: ...
+    def value(self, newval: object) -> None: ...
     @property
     def named(self) -> bool: ...
     @named.setter
-    def named(self, newval: bool | None) -> None: ...
+    def named(self, newval: bool) -> None: ...
     @property
     def hexadecimal(self) -> bool: ...
     @hexadecimal.setter

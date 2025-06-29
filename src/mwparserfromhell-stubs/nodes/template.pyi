@@ -1,4 +1,4 @@
-from collections.abc import Generator
+from collections.abc import Mapping
 from typing import Literal, TypeVar, overload
 
 from ..utils import _Parseable
@@ -11,8 +11,11 @@ __all__ = ["Template"]
 _T = TypeVar("_T")
 
 class Template(Node):
-    def __init__(self, name: _Parseable, params: _Parseable = ...) -> None: ...
-    def __children__(self) -> Generator[Wikicode, None, None]: ...
+    def __init__(
+        self,
+        name: _Parseable,
+        params: list[Parameter] | None = ...,
+    ) -> None: ...
     @overload
     def __strip__(
         self,
@@ -45,6 +48,9 @@ class Template(Node):
     def params(self) -> list[Parameter]: ...
     def has(self, name: object, ignore_empty: bool = ...) -> bool: ...
     has_param = has
+    @overload
+    def get(self, name: object) -> Parameter: ...
+    @overload
     def get(self, name: object, default: _T = ...) -> Parameter | _T: ...
     def __getitem__(self, name: object) -> Parameter: ...  # type: ignore[override]  # pyright: ignore[reportIncompatibleMethodOverride]
     def add(
@@ -52,9 +58,19 @@ class Template(Node):
         name: _Parseable,
         value: _Parseable,
         showkey: bool | None = ...,
-        before: Parameter | _Parseable = ...,
+        before: str | Parameter | None = ...,
+        after: str | Parameter | None = ...,
         preserve_spacing: bool = ...,
     ) -> Parameter: ...
+    def update(
+        self,
+        params: Mapping[_Parseable, _Parseable],
+        *,
+        showkey: bool | None = ...,
+        before: str | Parameter | None = ...,
+        after: str | Parameter | None = ...,
+        preserve_spacing: bool = ...,
+    ) -> None: ...
     def __setitem__(self, name: _Parseable, value: _Parseable) -> None: ...
     def remove(self, param: Parameter | object, keep_field: bool = ...) -> None: ...
     def __delitem__(self, param: Parameter | object) -> None: ...

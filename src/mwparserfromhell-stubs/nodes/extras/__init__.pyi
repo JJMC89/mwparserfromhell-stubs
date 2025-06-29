@@ -1,2 +1,4 @@
-from .attribute import Attribute as Attribute  # noqa: F401
-from .parameter import Parameter as Parameter  # noqa: F401
+from .attribute import Attribute as Attribute
+from .parameter import Parameter as Parameter
+
+__all__ = ["Attribute", "Parameter"]

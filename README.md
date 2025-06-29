@@ -10,8 +10,6 @@
 
 type annotations for [mwparserfromhell](https://github.com/earwig/mwparserfromhell)
 
-`mwparserfromhell.definitions`, `mwparserfromhell.parser`, and `mwparserfromhell.smart_list.utils` are excluded since users should not need to interface with them.
-
 ## versioning
 
 versions follow `A.B.C.YYMMDD`, where `A.B.C` is the mwparserfromhell version the stubs correspond to and `YYMMDD` is the stubs release date.

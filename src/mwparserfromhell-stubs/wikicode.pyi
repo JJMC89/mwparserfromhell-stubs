@@ -23,16 +23,21 @@ __all__ = ["Wikicode"]
 _NodeT = TypeVar("_NodeT", bound=Node)
 
 class Wikicode(StringMixIn):
-    RECURSE_OTHERS: int = 2
+    RECURSE_OTHERS: int
     def __init__(self, nodes: list[Node]) -> None: ...
     @property
     def nodes(self) -> SmartList[Node]: ...
     @nodes.setter
-    def nodes(self, value: _Parseable) -> None: ...
+    def nodes(self, value: list[Node] | _Parseable) -> None: ...
+    @overload
     def get(self, index: int) -> Node: ...
+    @overload
+    def get(self, index: slice) -> list[Node]: ...
+    @overload
+    def get(self, index: int | slice) -> Node | list[Node]: ...
     def set(self, index: int, value: _Parseable) -> None: ...
-    def contains(self, obj: object) -> bool: ...
-    def index(self, obj: object, recursive: bool = ...) -> int: ...
+    def contains(self, obj: str | Node | Wikicode) -> bool: ...
+    def index(self, obj: str | Node | Wikicode, recursive: bool = ...) -> int: ...
     def get_ancestors(self, obj: Node | Wikicode) -> list[Node]: ...
     def get_parent(self, obj: Node | Wikicode) -> Node | None: ...
     def insert(self, index: int, value: _Parseable) -> None: ...
@@ -63,29 +68,29 @@ class Wikicode(StringMixIn):
     @overload
     def ifilter(
         self,
-        recursive: bool | int = ...,
+        recursive: bool = ...,
         matches: str | Callable[[_NodeT], bool] | None = ...,
         flags: int | RegexFlag = ...,
         *,
         forcetype: type[_NodeT],
-    ) -> Generator[_NodeT, None, None]: ...
+    ) -> Generator[_NodeT]: ...
     @overload  # pyright only
     def ifilter(
         self,
-        recursive: bool | int = ...,
+        recursive: bool = ...,
         matches: str | Callable[[_NodeT], bool] | None = ...,
         flags: int | RegexFlag = ...,
         *,
         forcetype: tuple[type[_NodeT], ...],
-    ) -> Generator[_NodeT, None, None]: ...
+    ) -> Generator[_NodeT]: ...
     @overload
     def ifilter(
         self,
-        recursive: bool | int = ...,
+        recursive: bool = ...,
         matches: str | Callable[[Node], bool] | None = ...,
         flags: int | RegexFlag = ...,
         forcetype: None = ...,
-    ) -> Generator[Node, None, None]: ...
+    ) -> Generator[Node]: ...
     @overload
     def filter(
         self,
@@ -117,7 +122,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[Argument], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[Argument, None, None]: ...
+    ) -> Generator[Argument]: ...
     def filter_arguments(
         self,
         recursive: bool | int = ...,
@@ -129,7 +134,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[Comment], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[Comment, None, None]: ...
+    ) -> Generator[Comment]: ...
     def filter_comments(
         self,
         recursive: bool | int = ...,
@@ -141,7 +146,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[ExternalLink], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[ExternalLink, None, None]: ...
+    ) -> Generator[ExternalLink]: ...
     def filter_external_links(
         self,
         recursive: bool | int = ...,
@@ -153,7 +158,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[Heading], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[Heading, None, None]: ...
+    ) -> Generator[Heading]: ...
     def filter_headings(
         self,
         recursive: bool | int = ...,
@@ -165,7 +170,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[HTMLEntity], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[HTMLEntity, None, None]: ...
+    ) -> Generator[HTMLEntity]: ...
     def filter_html_entities(
         self,
         recursive: bool | int = ...,
@@ -177,7 +182,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[Tag], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[Tag, None, None]: ...
+    ) -> Generator[Tag]: ...
     def filter_tags(
         self,
         recursive: bool | int = ...,
@@ -189,7 +194,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[Template], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[Template, None, None]: ...
+    ) -> Generator[Template]: ...
     def filter_templates(
         self,
         recursive: bool | int = ...,
@@ -201,7 +206,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[Text], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[Text, None, None]: ...
+    ) -> Generator[Text]: ...
     def filter_text(
         self,
         recursive: bool | int = ...,
@@ -213,7 +218,7 @@ class Wikicode(StringMixIn):
         recursive: bool | int = ...,
         matches: str | Callable[[Wikilink], bool] | None = ...,
         flags: int | RegexFlag = ...,
-    ) -> Generator[Wikilink, None, None]: ...
+    ) -> Generator[Wikilink]: ...
     def filter_wikilinks(
         self,
         recursive: bool | int = ...,

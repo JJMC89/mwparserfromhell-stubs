@@ -1,1 +1,3 @@
-from .smart_list import SmartList as SmartList  # noqa: F401
+from .smart_list import SmartList as SmartList
+
+__all__ = ["SmartList"]
