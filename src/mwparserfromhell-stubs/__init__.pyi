@@ -9,8 +9,8 @@ from . import wikicode as wikicode
 __author__: str
 __copyright__: str
 __license__: str
-__version__: str
 __email__: str
+__version__: str
 
 __all__ = [
     "definitions",

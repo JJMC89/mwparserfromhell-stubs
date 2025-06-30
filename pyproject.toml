@@ -18,7 +18,7 @@ license = { text = "MIT" }
 name = "mwparserfromhell-stubs"
 readme = "README.md"
 requires-python = ">=3.9"
-version = "0.7.0.250629"
+version = "0.7.1.250630"
 
 [project.urls]
 repository = "https://github.com/JJMC89/mwparserfromhell-stubs"
@@ -55,7 +55,7 @@ mypy = "1.16.1"
 pyright = "1.1.402"
 
 [tool.poetry.group.stubtest.dependencies]
-mwparserfromhell = "0.7.0"
+mwparserfromhell = "0.7.1"
 
 
 [tool.pyright]
