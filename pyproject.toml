@@ -51,7 +51,7 @@ packages = [
 ]
 
 [tool.poetry.group.typing.dependencies]
-mypy = "1.17.1"
+mypy = "1.18.1"
 pyright = "1.1.405"
 
 [tool.poetry.group.stubtest.dependencies]
