@@ -17,7 +17,7 @@ dynamic = [
 license = { text = "MIT" }
 name = "mwparserfromhell-stubs"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 version = "0.7.2.250702"
 
 [project.urls]
@@ -25,13 +25,13 @@ repository = "https://github.com/JJMC89/mwparserfromhell-stubs"
 
 
 [tool.black]
-target-version = ["py39"]
+target-version = ["py310"]
 
 
 [tool.isort]
 atomic = true
 profile = "black"
-py_version = 39
+py_version = 310
 
 
 [tool.mypy]
