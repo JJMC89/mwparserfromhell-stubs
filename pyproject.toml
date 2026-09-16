@@ -52,7 +52,7 @@ packages = [
 
 [tool.poetry.group.typing.dependencies]
 mypy = "2.3.1"
-pyright = "1.1.411"
+pyright = "1.1.414"
 
 [tool.poetry.group.stubtest.dependencies]
 mwparserfromhell = "0.7.2"
